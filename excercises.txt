@@ -10,6 +10,8 @@ function sum(a,b){
 /*
 Write a function whhich takes one argument as Array of numbers and returns sum of that numbers 
 */
+
+ /*option 1 */
 function calculateElementsSum (arr){
   let s = 0;
   arr.forEach((el)=>{
@@ -18,8 +20,8 @@ function calculateElementsSum (arr){
  return s
   
 }
- 
--------------------------
+
+ /*option 2 */
 function calculateElementsSum(arr){
     return arr.reduce(function(aggr,val){
         return aggr + val;
@@ -30,6 +32,7 @@ function calculateElementsSum(arr){
 /*
  Write a function which takes one argument as array and prints type of each element of that Array.
 */
+
  function printElementsType (arr){
      arr.forEach(el => console.log(typeof el))
 }
