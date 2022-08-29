@@ -2,40 +2,34 @@
 Write a function which takes 2 arguments as numbers and returns that two numbers sum
 */
 
-function arr(a,b){
-    var sum=a+b;
-    return sum;
+function sum(a,b){
+   return a+b
 }
-let sumElement=arr(5,9);
-console.log(sumElement);
 
 
 /*
 Write a function whhich takes one argument as Array of numbers and returns sum of that numbers 
 */
-function sum (arr){
-  var sum =0;
-  for (var i = 0 ; i< arr.length;i++){
-    sum = sum + arr[i];
+function calculateElementsSum (arr){
+  let s = 0;
+  arr.forEach((el)=>{
+   s=sum(el,s)
+  })
+ return s
+  
 }
-  console.log(sum)
-}
-sum([0,50,30])
+ 
 -------------------------
-function sum(arr){
+function calculateElementsSum(arr){
     return arr.reduce(function(aggr,val){
         return aggr + val;
     },0);
 }
-console.log(sum([1,2,6]));
 
 
 /*
  Write a function which takes one argument as array and prints type of each element of that Array.
 */
-function isType (arr){
-  for (var i = 0 ; i< arr.length;i++){
-    console.log( typeof arr[i]);
+ function printElementsType (arr){
+     arr.forEach(el => console.log(typeof el))
 }
-}
-isType([0,50,'30'])
