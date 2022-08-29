@@ -1,0 +1,80 @@
+ write a function which takes array as an argument and returns 
+object which keys are indexes of that array and values are values 
+of that array. Use ForEach function of js.
+*/
+function createObj(item,index){
+    let obj ={
+        index:item
+    }
+    return obj
+}
+function toObject(arr){
+    arr.forEach(createObj)
+}
+toObject(['eee','ggg'])
+
+
+
+/*
+Write a function which takes 2 parameters, 
+one- array of numbers , 
+two - number. Returns another array which values multiplied by second argument. 
+Use map function of js. 
+*/
+    function myFunction(arr,num){
+    let newArr = arr.map(function(el){
+        return el*num
+    })
+    console.log(newArr)    
+}
+myFunction([5,40],2)
+
+/*
+Write a function which takes array of numbers as a parameter and returns 2× of 
+array elements in another array. 
+Please use function which writen in Exercise-2.
+    */
+
+function calc (el) {
+    return el*2        
+    }
+
+function doubleValue(arr){
+    let newArr = arr.map(calc)
+    console.log(newArr)
+}
+doubleValue([5,4])
+
+
+
+/*
+write a function which takes Array as a parameter and returns 
+Array filtered only numbers in it. Use filter function of js.
+*/
+
+function onlyNumbers(arr){
+   let newArr = arr.filter(e => typeof e === 'number')
+    console.log(newArr)
+}
+onlyNumbers(['5',5,'sss',66,7])
+
+
+/*
+write a function which takes Array as a parameter and returns sum
+of existing numbers of that array. Use function for previous 
+exercise and also use Reduse function of js to calculate sum. 
+    */
+
+function filterNum(e){
+    return typeof e === 'number'    
+}
+function calculateSum(e,k){
+    return e+k
+}
+function sumNumber(arr){
+    let newArr = arr.filter(filterNum);
+    let k=0;
+    newArr.forEach(e=>calculateSum(e,k))  
+}
+sumNumber([6,'k','b',10])
+
