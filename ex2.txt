@@ -23,7 +23,7 @@ Use map function of js.
 */
 
     function myFunction(array,num){
-    return newArr = array.map(function(el){
+    return  array.map(function(el){
         return el*num
     }) 
 }
@@ -36,9 +36,8 @@ Please use function which writen in Exercise-2.
 
 
 function doubleValue(array){
-    return newArray = myFunction(array,2)
+    return  myFunction(array,2)
 }
-
 
 
 /*
@@ -47,9 +46,8 @@ Array filtered only numbers in it. Use filter function of js.
 */
 
 function onlyNumbers(array){
-   return newArr = array.filter(e => typeof e === 'number')
+   return array.filter(e => typeof e === 'number')
 }
-
 
 /*
 write a function which takes Array as a parameter and returns sum
@@ -60,8 +58,7 @@ exercise and also use Reduse function of js to calculate sum.
 
 function sumNumbers(array){
    let newArr = onlyNumbers(array)
-   return sum= newArr.reduce(function(prVal, curVal) {
+   return newArr.reduce(function(prVal, curVal) {
         return prVal+ curVal
     },0);
-    return sum
 }
